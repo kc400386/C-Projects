@@ -1,0 +1,3 @@
+C:/Users/black/Documents/computer science/Clion code/Pro_two/shape_calc/cmake-build-debug/CMakeFiles/shape_calc.dir
+C:/Users/black/Documents/computer science/Clion code/Pro_two/shape_calc/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/black/Documents/computer science/Clion code/Pro_two/shape_calc/cmake-build-debug/CMakeFiles/rebuild_cache.dir
