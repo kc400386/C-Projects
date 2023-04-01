@@ -10,12 +10,14 @@
 #include "Line.h" // includes the line class in this file
 #include "Circle.h" // includes the circle class in this file
 #include <vector>
-
+#include<limits>
 
 Point point_collector();
 Line* get_line();
 Rectangle* get_rectangle();
 Circle* get_circle();
+int user_input_check(int value);
+
 
 int main() { // goes through and loops through the other functions that help the fill and calculate shape values
 
@@ -75,6 +77,12 @@ int main() { // goes through and loops through the other functions that help the
 
                 } // end shape_printer for loop
 
+                break;
+
+            default:
+
+                std::cout << "You have entered an invalid value please try again" << std::endl;
+
         } // end shape_decider switch statement
 
     } while (shape_decider != 'B'); // end shape_decider while loop
@@ -91,9 +99,9 @@ Point point_collector() { // calculates the user's points
     int x_value;
     int y_value;
     std::cout << "Please enter the x value of your point." << std::endl;
-    std::cin >> x_value;
+    x_value = user_input_check(x_value);
     std::cout << "Please enter the y value of your point." << std::endl;
-    std::cin >> y_value;
+    y_value = user_input_check(y_value);
 
     point_value =  new Point(x_value, y_value); // makes the new object variable of type point
 
@@ -123,9 +131,10 @@ Rectangle* get_rectangle() { // calculates a rectangle of type Rectangle
     int length;
     int width;
     std::cout << "Please enter the width of you rectangle." << std::endl;
-    std::cin >> width;
+    //std::cin >> width;
+    width = user_input_check(width);
     std::cout << "Please enter the length of you rectangle." << std::endl;
-    std::cin >> length;
+    length = user_input_check(length);
     std::cout << "Please enter the top left point of your rectangle." << std::endl;
     Point point_one = point_collector();
 
@@ -141,7 +150,7 @@ Circle* get_circle() { // calculates a circle of type circle
 
     int radius;
     std::cout << "Please enter the radius of you circle." << std::endl;
-    std::cin >> radius;
+    radius = user_input_check(radius);
     std::cout << "Please enter the center point of your circle." << std::endl;
     Point center = point_collector();
 
@@ -151,3 +160,28 @@ Circle* get_circle() { // calculates a circle of type circle
 
 } // end get_circle
 
+int user_input_check(int value) {
+
+
+    std::cin >> value;
+    while (true) {
+
+        // this check work but if an input starting with an int such as 1a is set then it will break. Ask prof for help
+        if(std::cin.fail()) { // check if invalid input is set
+            std::cin.clear(); // clears the input
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // clears the error
+            std::cout << "You have entered an invalid value please try again" << std::endl;
+            std::cin >> value;
+
+        }
+        
+        else {
+
+            break;
+
+        }
+
+    } // end while
+
+    return value;
+} // end user_input_check
