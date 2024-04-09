@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class NewPageLinks {
 
-    @Test
+    @Test(priority = 3)
     void NewPageLinks() throws InterruptedException {
 
         WebDriver driver = new EdgeDriver();

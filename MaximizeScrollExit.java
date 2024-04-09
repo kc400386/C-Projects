@@ -5,7 +5,7 @@ import org.openqa.selenium.JavascriptExecutor;
 
 public class MaximizeScrollExit {
 
-    @Test
+    @Test(priority = 2)
     void MaximizeAndScroll() throws InterruptedException {
 
         WebDriver driver = new EdgeDriver();

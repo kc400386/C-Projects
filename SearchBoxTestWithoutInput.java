@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class SearchBoxTestWithoutInput {
 
-    @Test
+    @Test(priority = 7)
     void SearchBoxWithoutInput() throws InterruptedException {
 
         WebDriver driver = new EdgeDriver();

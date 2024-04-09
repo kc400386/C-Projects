@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class HyperLinks {
 
-    @Test
+    @Test(priority = 1)
     void HyperlinkTest() throws InterruptedException { // Tests the links that takes you to amazon.
 
         WebDriver driver = new EdgeDriver();

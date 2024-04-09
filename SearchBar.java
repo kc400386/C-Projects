@@ -4,7 +4,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 public class SearchBar {
 
-    @Test
+    @Test(priority = 6)
     void SearchFunction() throws InterruptedException {
 
         WebDriver driver = new EdgeDriver();

@@ -4,7 +4,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.testng.annotations.Test;
 public class URLTitle {
 
-    @Test
+    @Test(priority = 8)
     void GetUrlAndTitle() throws InterruptedException {
 
         WebDriver driver = new EdgeDriver();

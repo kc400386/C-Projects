@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 public class OpenAndCopyUpdatePagesText {
 
-    @Test
+    @Test(priority = 4)
     void start() throws InterruptedException {
 
         WebDriver driver = new EdgeDriver();

@@ -8,7 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 
 public class PlayAndPauseVideo {
 
-   @Test
+   @Test(priority = 5)
     void PlayVideoAndPause() throws InterruptedException {
 
         WebDriver driver = new EdgeDriver();
