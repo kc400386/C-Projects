@@ -1,0 +1,1 @@
+In this project Dev10 had me create a program that allowed a user to add an infinte amount of numbers to a stack. As long as those number are smaller then their predecessors. The user could also remove values from the stack or display the current stack with the smallest number on top.
